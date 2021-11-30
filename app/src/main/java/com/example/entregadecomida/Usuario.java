@@ -1,20 +1,11 @@
-public class Usuario {
-    int id;
-    String Nombres, Apelliodos, Usuarios, password;
+package com.example.entregadecomida;
 
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", Nombres='" + Nombres + '\'' +
-                ", Apelliodos='" + Apelliodos + '\'' +
-                ", Usuarios='" + Usuarios + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+public class Usuario {
+int id;
+String Nombres, Apellidos, Usuarios, password;
 
     public boolean isNull(){
-        if(Nombres.equals("") && Apelliodos.equals("") && Usuarios.equals("") && password.equals("")){
+        if(Nombres.equals("") && Apellidos.equals("") && Usuarios.equals("") && password.equals("")){
             return false;
         }
         else{
@@ -22,10 +13,21 @@ public class Usuario {
         }
     }
 
-    public Usuario(int id, String nombres, String apelliodos, String usuarios, String password) {
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", Nombres='" + Nombres + '\'' +
+                ", Apellidos='" + Apellidos + '\'' +
+                ", Usuarios='" + Usuarios + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+    public Usuario(int id, String nombres, String apellidos, String usuarios, String password) {
         this.id = id;
         Nombres = nombres;
-        Apelliodos = apelliodos;
+        Apellidos = apellidos;
         Usuarios = usuarios;
         this.password = password;
     }
@@ -46,12 +48,12 @@ public class Usuario {
         Nombres = nombres;
     }
 
-    public String getApelliodos() {
-        return Apelliodos;
+    public String getApellidos() {
+        return Apellidos;
     }
 
-    public void setApelliodos(String apelliodos) {
-        Apelliodos = apelliodos;
+    public void setApellidos(String apellidos) {
+        Apellidos = apellidos;
     }
 
     public String getUsuarios() {
