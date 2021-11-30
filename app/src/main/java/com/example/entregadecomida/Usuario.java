@@ -2,10 +2,10 @@ package com.example.entregadecomida;
 
 public class Usuario {
 int id;
-String Nombres, Apellidos, Usuarios, password;
+String Nombres, Apellidos, Usuario, password;
 
     public boolean isNull(){
-        if(Nombres.equals("") && Apellidos.equals("") && Usuarios.equals("") && password.equals("")){
+        if(Nombres.equals("") && Apellidos.equals("") && Usuario.equals("") && password.equals("")){
             return false;
         }
         else{
@@ -19,16 +19,19 @@ String Nombres, Apellidos, Usuarios, password;
                 "id=" + id +
                 ", Nombres='" + Nombres + '\'' +
                 ", Apellidos='" + Apellidos + '\'' +
-                ", Usuarios='" + Usuarios + '\'' +
+                ", Usuarios='" + Usuario + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
 
-    public Usuario(int id, String nombres, String apellidos, String usuarios, String password) {
-        this.id = id;
+    public Usuario() {
+
+    }
+
+    public Usuario(String nombres, String apellidos, String usuarios, String password) {
         Nombres = nombres;
         Apellidos = apellidos;
-        Usuarios = usuarios;
+        Usuario = usuarios;
         this.password = password;
     }
 
@@ -56,12 +59,12 @@ String Nombres, Apellidos, Usuarios, password;
         Apellidos = apellidos;
     }
 
-    public String getUsuarios() {
-        return Usuarios;
+    public String getUsuario() {
+        return Usuario;
     }
 
-    public void setUsuarios(String usuarios) {
-        Usuarios = usuarios;
+    public void setUsuario(String usuario) {
+        Usuario = usuario;
     }
 
     public String getPassword() {
