@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -16,12 +17,15 @@ public class DetailActivity extends AppCompatActivity {
 
     ActivityDetailBinding binding;
     private EditText nombreC, phones;
+    private TextView cantidad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        cantidad = (TextView)findViewById(R.id.quantity);
 
         DBHelper helper = new DBHelper(this);
 
@@ -112,4 +116,31 @@ public class DetailActivity extends AppCompatActivity {
             });
         }
     }
+
+    //Metodo añadir cantidad
+    public void añadir(View view){
+        String numero1 = cantidad.getText().toString();
+
+        int num1 = Integer.parseInt(numero1);
+        int suma = num1 + 1;
+        String result = String.valueOf(suma);
+        cantidad.setText(result);
+
+    }
+
+    //Metodo resta cantidad
+    public void resta(View view){
+        String numero1 = cantidad.getText().toString();
+
+        int num1 = Integer.parseInt(numero1);
+        int resta = num1 - 1;
+
+        if(resta == 0){
+            Toast.makeText(DetailActivity.this,"El campo no puede ser 0", Toast.LENGTH_SHORT).show();
+        }else {
+            String result = String.valueOf(resta);
+            cantidad.setText(result);
+        }
+    }
+
 }

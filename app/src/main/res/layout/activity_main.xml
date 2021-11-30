@@ -10,7 +10,32 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerview"
         android:layout_width="match_parent"
+        android:layout_height="695dp"
+        tools:listitem="@layout/sample_mainfood" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/sample_mainfood"/>
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/iconhome"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/iconprofile"
+            android:textAlignment="center" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
