@@ -7,7 +7,7 @@
     tools:context=".actualizarUsuario">
 
     <Button
-        android:id="@+id/btnCancelarAct"
+        android:id="@+id/btnCancelarReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnActualizar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
         app:layout_constraintVertical_bias="0.184" />
 
     <TextView
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.091" />
 
     <EditText
-        android:id="@+id/txtNombreAct"
+        android:id="@+id/txtNombreReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -50,13 +50,13 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtApellidoAct"
-        app:layout_constraintStart_toStartOf="@+id/txtApellidoAct"
+        app:layout_constraintEnd_toEndOf="@+id/txtApellidoReg"
+        app:layout_constraintStart_toStartOf="@+id/txtApellidoReg"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.001" />
 
     <EditText
-        android:id="@+id/txtApellidoAct"
+        android:id="@+id/txtApellidoReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -66,13 +66,13 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtUsuarioAct"
-        app:layout_constraintStart_toStartOf="@+id/txtUsuarioAct"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreAct"
+        app:layout_constraintEnd_toEndOf="@+id/txtUsuarioReg"
+        app:layout_constraintStart_toStartOf="@+id/txtUsuarioReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreReg"
         app:layout_constraintVertical_bias="0.056" />
 
     <EditText
-        android:id="@+id/txtUsuarioAct"
+        android:id="@+id/txtUsuarioReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -82,13 +82,13 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtContraseñaAct"
-        app:layout_constraintStart_toStartOf="@+id/txtContraseñaAct"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoAct"
+        app:layout_constraintEnd_toEndOf="@+id/txtContraseñaReg"
+        app:layout_constraintStart_toStartOf="@+id/txtContraseñaReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoReg"
         app:layout_constraintVertical_bias="0.062" />
 
     <EditText
-        android:id="@+id/txtContraseñaAct"
+        android:id="@+id/txtContraseñaReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -101,11 +101,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsuarioAct"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuarioReg"
         app:layout_constraintVertical_bias="0.072" />
 
     <Button
-        android:id="@+id/btnActualizar"
+        android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -116,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseñaAct"
+        app:layout_constraintTop_toBottomOf="@+id/txtContraseñaReg"
         app:layout_constraintVertical_bias="0.16" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
