@@ -21,8 +21,8 @@ daoUsuario dao;
         pas=(EditText)findViewById(R.id.txtContraseñaReg);
         nom=(EditText)findViewById(R.id.txtNombreReg);
         ap=(EditText)findViewById(R.id.txtApellidoReg);
-        reg=(Button)findViewById(R.id.btnRegistrarse);
-        can=(Button)findViewById(R.id.btnRegistrar);
+        reg=(Button)findViewById(R.id.btnRegistrar);
+        can=(Button)findViewById(R.id.btnCancelarReg);
 
         reg.setOnClickListener(this);
         can.setOnClickListener(this);
@@ -44,6 +44,9 @@ daoUsuario dao;
                 }
                 else if(dao.insertUsuario(u)){
                     Toast.makeText(this,"¡Registro Exitoso!",Toast.LENGTH_LONG).show();
+                    Intent i2=new Intent(RegistrarUsuario.this,login.class);
+                    startActivity(i2);
+                    finish();
                 }
                 else{
                     Toast.makeText(this,"¡El usuario ya existe!",Toast.LENGTH_LONG).show();

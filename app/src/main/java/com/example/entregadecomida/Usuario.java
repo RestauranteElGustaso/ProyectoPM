@@ -7,6 +7,7 @@ String Nombres, Apellidos, Usuario, password;
     public boolean isNull(){
         if(Nombres.equals("") && Apellidos.equals("") && Usuario.equals("") && password.equals("")){
             return false;
+
         }
         else{
             return true;

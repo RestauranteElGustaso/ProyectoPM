@@ -13,7 +13,7 @@ public class daoUsuario {
     ArrayList<Usuario> lista;
     SQLiteDatabase sql;
     String bd="BDUsuarios";
-    String tabla="create table usuario(id integer primary key autoincrement, usuario text, pass text, nombre text, ap text)";
+    String tabla="create table if not exists usuario(id integer primary key autoincrement, usuario text, pass text, nombre text, ap text)";
 
     public daoUsuario(Context c){
         this.c=c;
@@ -56,7 +56,6 @@ public class daoUsuario {
                         u.setId(cr.getInt(0 ));
                         u.setUsuario(cr.getString(1));
                         u.setPassword(cr.getString(2));
-                        u.setUsuario(cr.getString(3));
                         u.setNombres(cr.getString(3));
                         u.setApellidos(cr.getString(4));
                         lista.add(u);
@@ -65,6 +64,37 @@ public class daoUsuario {
                 return lista;
         }
 
+        public int login(String u, String p) {
+            int contador = 0;
+            Cursor cr = sql.rawQuery("select * from usuario", null);
+            if (cr!=null&&cr.moveToFirst()) {
+                do {
+                    if (cr.getString(1).equals(u) && cr.getString(2).equals(p)){
+                        contador++;
+                    }
+                } while (cr.moveToNext());
+            }
+            return contador;
+        }
 
+        public Usuario getUsuario(String u, String p){
+        lista=selectUsuario();
+            for (Usuario us:lista) {
+                if (us.getUsuario().equals(u)&&us.getPassword().equals(p)){
+                    return us;
+                }
+            }
+            return null;
+        }
+
+    public Usuario getUsuariobyID(int id){
+        lista=selectUsuario();
+        for (Usuario us:lista) {
+            if (us.getId()==id){
+                return us;
+            }
+        }
+        return null;
+    }
 }
 

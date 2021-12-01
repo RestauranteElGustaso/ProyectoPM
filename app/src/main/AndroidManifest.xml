@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EntregaDeComida">
         <activity
+            android:name=".PerfilUsuario"
+            android:exported="false" />
+        <activity
             android:name=".MostarUsuarios"
             android:exported="true" />
         <activity
@@ -19,7 +22,7 @@
             android:name=".RegistrarUsuario"
             android:exported="true" />
         <activity
-            android:name=".login"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".DetailActivity"
@@ -28,7 +31,7 @@
             android:name=".OrderActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

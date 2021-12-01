@@ -4,83 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".PerfilUsuario">
 
-    <EditText
-        android:id="@+id/txtUsuarioLog"
+    <Button
+        android:id="@+id/btnEditarPerf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:text="Actualizar Cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
+        app:layout_constraintVertical_bias="0.068" />
 
-    <EditText
-        android:id="@+id/txtPasswordLog"
+    <Button
+        android:id="@+id/btnMostrarPerf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:text="Mostrar cuentas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsuarioLog"
-        app:layout_constraintVertical_bias="0.0"
-        android:hint="Contraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEditarPerf"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnEliminarPerf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_background"
-        android:text="Ingresar"
+        android:layout_marginBottom="4dp"
+        android:text="Eliminar Cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPasswordLog"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMostrarPerf"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnRegistrarse"
+        android:id="@+id/btnSalirPerf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_background"
-        android:text="Registrarse"
+        android:layout_marginBottom="4dp"
+        android:text="Salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEliminarPerf"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="60dp"
+    <TextView
+        android:id="@+id/txtNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola Usuario"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+        app:layout_constraintVertical_bias="0.054" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
