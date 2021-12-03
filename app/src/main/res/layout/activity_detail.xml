@@ -44,11 +44,11 @@
                 android:padding="3dp">
 
                 <Button
-                    android:id="@+id/add"
+                    android:id="@+id/subtract"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/mas"
-                    android:onClick="añadir" />
+                    android:background="@drawable/menos"
+                    android:onClick="resta" />
 
                 <TextView
                     android:id="@+id/quantity"
@@ -61,11 +61,11 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/subtract"
+                    android:id="@+id/add"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/menos"
-                    android:onClick="resta" />
+                    android:background="@drawable/mas"
+                    android:onClick="añadir" />
 
             </LinearLayout>
         </LinearLayout>
