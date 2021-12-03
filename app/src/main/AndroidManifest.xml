@@ -13,9 +13,6 @@
             android:name=".PerfilUsuario"
             android:exported="false" />
         <activity
-            android:name=".MostarUsuarios"
-            android:exported="true" />
-        <activity
             android:name=".actualizarUsuario"
             android:exported="true" />
         <activity
