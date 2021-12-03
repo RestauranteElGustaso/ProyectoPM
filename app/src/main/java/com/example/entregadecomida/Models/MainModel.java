@@ -2,13 +2,14 @@ package com.example.entregadecomida.Models;
 
 public class MainModel {
     int image;
-    String name, price, description;
+    String name, price, description, quantity;
 
-    public MainModel(int image, String name, String price, String description) {
+    public MainModel(int image, String name, String price, String description, String quantity) {
         this.image = image;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.quantity = quantity;
     }
 
     public int getImage() {
@@ -41,5 +42,11 @@ public class MainModel {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getQuantity(){return quantity;}
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 }

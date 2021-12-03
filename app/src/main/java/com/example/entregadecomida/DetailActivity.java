@@ -17,7 +17,8 @@ public class DetailActivity extends AppCompatActivity {
 
     ActivityDetailBinding binding;
     private EditText nombreC, phones;
-    private TextView cantidad;
+    private TextView cantidad, precio;
+    private int primerPrecio, precioFinal, totalPrecio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,12 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         cantidad = (TextView)findViewById(R.id.quantity);
+        precio = (TextView)findViewById(R.id.priceLbl);
+        primerPrecio = Integer.parseInt(getIntent().getStringExtra("price"));
 
         DBHelper helper = new DBHelper(this);
 
         if (getIntent().getIntExtra("type", 0) == 1){
-
-
 
        final int image = getIntent().getIntExtra("image",0);
        final int price = Integer.parseInt(getIntent().getStringExtra("price"));
@@ -120,26 +121,43 @@ public class DetailActivity extends AppCompatActivity {
     //Metodo añadir cantidad
     public void añadir(View view){
         String numero1 = cantidad.getText().toString();
+        String valor = precio.getText().toString();
 
         int num1 = Integer.parseInt(numero1);
         int suma = num1 + 1;
-        String result = String.valueOf(suma);
-        cantidad.setText(result);
+        int primerVariable = Integer.parseInt(String.valueOf(primerPrecio));
+
+        String resultadoSuma = String.valueOf(suma);
+        cantidad.setText(resultadoSuma);
+
+        int valorPrecio = Integer.parseInt(valor);
+        totalPrecio = valorPrecio + primerVariable;
+
+        String resultadoTotalPre = String.valueOf(totalPrecio);
+        precio.setText(resultadoTotalPre);
 
     }
 
     //Metodo resta cantidad
     public void resta(View view){
         String numero1 = cantidad.getText().toString();
+        String valor = precio.getText().toString();
 
         int num1 = Integer.parseInt(numero1);
         int resta = num1 - 1;
+        int primerVariable = Integer.parseInt(String.valueOf(primerPrecio));
 
         if(resta == 0){
             Toast.makeText(DetailActivity.this,"El campo no puede ser 0", Toast.LENGTH_SHORT).show();
         }else {
             String result = String.valueOf(resta);
             cantidad.setText(result);
+
+            int valorPrecio = Integer.parseInt(valor);
+            totalPrecio = valorPrecio - primerVariable;
+
+            String resultadoTotalPre = String.valueOf(totalPrecio);
+            precio.setText(resultadoTotalPre);
         }
     }
 

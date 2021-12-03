@@ -95,7 +95,33 @@
                         android:textColor="#FB0707"
                         android:textStyle="bold" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="62dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:padding="1dp"
+                        android:text="Cantidad"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCantidadOrden"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FB0707"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
