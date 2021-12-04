@@ -57,28 +57,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnCasa2"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        android:background="@drawable/iconhome"
-        android:onClick="btnCasa"
-        android:textAlignment="center" />
-
-    <Button
-        android:id="@+id/btnPerfil2"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        android:background="@drawable/iconprofile"
-        android:onClick="btnPerfil"
-        android:textAlignment="center" />
-
-    <Button
-        android:id="@+id/btnPedidos2"
-        android:layout_width="60dp"
-        android:layout_height="55dp"
-        android:background="@drawable/iconorder" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabPago"
         android:layout_width="wrap_content"

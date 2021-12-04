@@ -20,7 +20,6 @@ public class DetailActivity extends AppCompatActivity {
     private EditText nombreC, phones;
     private TextView cantidad, precio;
     private int primerPrecio, precioFinal, totalPrecio;
-    public int cantidadProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +68,7 @@ public class DetailActivity extends AppCompatActivity {
                 );
 
               if (isInserted = !nombre.isEmpty() && !phone.isEmpty() && phone.length() == 8){
-                  Toast.makeText(DetailActivity.this,"Datos guardados con exito"+cantidadProducto, Toast.LENGTH_SHORT).show();
+                  Toast.makeText(DetailActivity.this,"Datos guardados con exito", Toast.LENGTH_SHORT).show();
                   Intent a = new Intent(DetailActivity.this, MainActivity.class);
                   startActivity(a);
                   finish();
