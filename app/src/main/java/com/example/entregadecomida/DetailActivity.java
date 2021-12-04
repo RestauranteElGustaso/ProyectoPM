@@ -2,6 +2,7 @@ package com.example.entregadecomida;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class DetailActivity extends AppCompatActivity {
     private EditText nombreC, phones;
     private TextView cantidad, precio;
     private int primerPrecio, precioFinal, totalPrecio;
+    public int cantidadProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +69,10 @@ public class DetailActivity extends AppCompatActivity {
                 );
 
               if (isInserted = !nombre.isEmpty() && !phone.isEmpty() && phone.length() == 8){
-
-                  Toast.makeText(DetailActivity.this,"Datos guardados con exito", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(DetailActivity.this,"Datos guardados con exito"+cantidadProducto, Toast.LENGTH_SHORT).show();
+                  Intent a = new Intent(DetailActivity.this, MainActivity.class);
+                  startActivity(a);
+                  finish();
               }else {
                   Toast.makeText(DetailActivity.this, "Verifique los datos ingresados", Toast.LENGTH_SHORT).show();
               }
@@ -98,7 +102,7 @@ public class DetailActivity extends AppCompatActivity {
                          image,
                          binding.detailDescription.getText().toString(),
                          binding.textView.getText().toString(),
-                         1,
+                         Integer.parseInt(binding.quantity.getText().toString()),
                          id
                          );
 

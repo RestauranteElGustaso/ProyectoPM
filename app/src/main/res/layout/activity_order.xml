@@ -1,16 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OrderActivity">
+    tools:context=".OrderActivity" >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ordersRecyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/order_sample" />
-</LinearLayout>
+        android:orientation="vertical"
+        tools:context=".OrderActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="695dp"
+            tools:listitem="@layout/order_sample" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <Button
+                android:id="@+id/btnCasa"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconhome"
+                android:onClick="btnCasa"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnPerfil"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="255dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconprofile"
+                android:onClick="btnPerfil"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnPedidos"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconorder" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCasa2"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:background="@drawable/iconhome"
+        android:onClick="btnCasa"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnPerfil2"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:background="@drawable/iconprofile"
+        android:onClick="btnPerfil"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnPedidos2"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:background="@drawable/iconorder" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="btnPago"
+        app:backgroundTint="#821E0D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832"
+        app:srcCompat="@drawable/iconpayment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -78,4 +78,18 @@ daoUsuario dao;
                 break;
         }
     }
+
+    public void btnPedidos (View view){
+        Intent i3=new Intent(PerfilUsuario.this, OrderActivity.class);
+        i3.putExtra("id",id);
+        startActivity(i3);
+        finish();
+    }
+
+    public void btnCasa (View view){
+        Intent i2=new Intent(PerfilUsuario.this, MainActivity.class);
+        i2.putExtra("id",id);
+        startActivity(i2);
+        finish();
+    }
 }

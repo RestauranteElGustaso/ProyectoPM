@@ -22,18 +22,18 @@ final static String DBNAME = "mydatabase.db";
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-  sqLiteDatabase.execSQL(
-          "create table orders " +
-                  "(id integer primary key autoincrement," +
-                  "name text," +
-                  "phone text," +
-                  "price int," +
-                  "image int," +
-                  "quantity int," +
-                  "description text,"+
-                  "foodname text)"
+      sqLiteDatabase.execSQL(
+              "create table orders " +
+                      "(id integer primary key autoincrement," +
+                      "name text," +
+                      "phone text," +
+                      "price int," +
+                      "image int," +
+                      "quantity int," +
+                      "description text,"+
+                      "foodname text)"
 
-  );
+      );
     }
 
     @Override
@@ -78,7 +78,7 @@ final static String DBNAME = "mydatabase.db";
     public ArrayList<OrdersModel> getOrders() {
         ArrayList<OrdersModel> orders = new ArrayList<>();
         SQLiteDatabase database = this.getWritableDatabase();
-        Cursor cursor = database.rawQuery("Select id, foodname, image, price from orders", null);
+        Cursor cursor = database.rawQuery("Select id, foodname, image, price, quantity from orders", null);
         if (cursor.moveToFirst()){
            while (cursor.moveToNext()){
                OrdersModel model = new OrdersModel();
@@ -86,6 +86,7 @@ final static String DBNAME = "mydatabase.db";
                model.setSoldItemName(cursor.getString(1));
                model.setOrderImage(cursor.getInt(2));
                model.setPrice(cursor.getInt(3) + "");
+               model.setQuantity(cursor.getInt(4)+"");
                orders.add(model);
            }
         }

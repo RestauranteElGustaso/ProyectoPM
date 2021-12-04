@@ -66,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
        switch (item.getItemId()){
            case R.id.orders:
-               startActivity(new Intent(MainActivity.this,OrderActivity.class));
+               Intent i3=new Intent(MainActivity.this, OrderActivity.class);
+               i3.putExtra("id",id);
+               startActivity(i3);
                break;
        }
 
@@ -74,7 +76,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnPedidos (View view){
-        startActivity(new Intent(MainActivity.this,OrderActivity.class));
+        Intent i3=new Intent(MainActivity.this, OrderActivity.class);
+        i3.putExtra("id",id);
+        startActivity(i3);
         finish();
     }
 
