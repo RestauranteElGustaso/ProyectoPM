@@ -19,22 +19,32 @@
         android:textAlignment="center">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnCasa"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/iconhome"
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnPerfil"
             android:layout_width="60dp"
             android:layout_height="55dp"
             android:layout_marginLeft="255dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/iconprofile"
+            android:onClick="btnPerfil"
             android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnPedidos"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/iconorder"
+            android:onClick="btnPedidos" />
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

@@ -47,7 +47,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.viewHolder
         holder.soldItemName.setText(model.getSoldItemName());
         holder.orderNumber.setText(model.getOrderNumber());
         holder.price.setText(model.getPrice());
-
+        holder.quantity.setText(model.getQuantity());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,7 +110,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.viewHolder
             price = (itemView).findViewById(R.id.textView7);
             add = (itemView).findViewById(R.id.add);
             subtract = (itemView).findViewById(R.id.subtract);
-            quantity = (itemView).findViewById(R.id.quantity);
+            quantity = (itemView).findViewById(R.id.txtCantidadOrden);
 
         }
     }

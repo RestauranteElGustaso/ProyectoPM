@@ -45,7 +45,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewholder> {
         holder.price.setText(model.getPrice());
         holder.description.setText(model.getDescription());
 
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
