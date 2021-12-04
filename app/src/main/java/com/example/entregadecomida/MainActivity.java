@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.entregadecomida.Adapters.MainAdapter;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.recylerview.setLayoutManager(layoutManager);
 
+        Bundle b = getIntent().getExtras();
+        id=b.getInt("id");
+
     }
 
     @Override
@@ -66,5 +71,17 @@ public class MainActivity extends AppCompatActivity {
        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void btnPedidos (View view){
+        startActivity(new Intent(MainActivity.this,OrderActivity.class));
+        finish();
+    }
+
+    public void btnPerfil (View view){
+        Intent i2=new Intent(MainActivity.this, PerfilUsuario.class);
+        i2.putExtra("id",id);
+        startActivity(i2);
+        finish();
     }
 }
