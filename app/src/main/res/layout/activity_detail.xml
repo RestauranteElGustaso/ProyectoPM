@@ -148,6 +148,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_background"
-            android:text="Ordenar Ahora" />
+            android:text="Ordenar Ahora"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFFFFF" />
     </LinearLayout>
 </LinearLayout>

@@ -17,7 +17,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/ordersRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="695dp"
+            android:layout_height="659dp"
             tools:listitem="@layout/order_sample" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -66,9 +66,9 @@
         app:backgroundTint="#821E0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.832"
+        app:layout_constraintVertical_bias="0.776"
         app:srcCompat="@drawable/iconpayment" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,14 +8,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="695dp"
+        android:layout_height="match_parent"
         android:background="@drawable/loginfond"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:context=".PerfilUsuario">
 
         <Button
@@ -56,7 +55,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
-            app:layout_constraintVertical_bias="0.412" />
+            app:layout_constraintVertical_bias="0.374" />
 
         <Button
             android:id="@+id/btnEliminarPerf"
@@ -117,45 +116,45 @@
             app:layout_constraintVertical_bias="0.452"
             app:srcCompat="@drawable/userperf" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btnCasa"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconhome"
+                android:onClick="btnCasa"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnPerfil"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="255dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconprofile"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnPedidos"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iconorder"
+                android:onClick="btnPedidos" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="393dp"
-        android:layout_height="89dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btnCasa"
-            android:layout_width="60dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/iconhome"
-            android:onClick="btnCasa"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/btnPerfil"
-            android:layout_width="60dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="255dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/iconprofile"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/btnPedidos"
-            android:layout_width="60dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/iconorder"
-            android:onClick="btnPedidos" />
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

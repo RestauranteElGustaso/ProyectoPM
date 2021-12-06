@@ -54,7 +54,9 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.viewHolder
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("id", Integer.parseInt(model.getOrderNumber()));
-              intent.putExtra("type", 2);
+                intent.putExtra("type", 2);
+                intent.putExtra("price", model.getPrice());
+                intent.putExtra("quantity", model.getQuantity());
                 context.startActivity(intent);
             }
         });

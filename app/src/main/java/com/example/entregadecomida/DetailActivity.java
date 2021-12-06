@@ -20,12 +20,16 @@ public class DetailActivity extends AppCompatActivity {
     private EditText nombreC, phones;
     private TextView cantidad, precio;
     private int primerPrecio, precioFinal, totalPrecio;
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Bundle b = getIntent().getExtras();
+        id=b.getInt("id");
 
         cantidad = (TextView)findViewById(R.id.quantity);
         precio = (TextView)findViewById(R.id.priceLbl);
@@ -69,9 +73,9 @@ public class DetailActivity extends AppCompatActivity {
 
               if (isInserted = !nombre.isEmpty() && !phone.isEmpty() && phone.length() == 8){
                   Toast.makeText(DetailActivity.this,"Datos guardados con exito", Toast.LENGTH_SHORT).show();
-                  Intent a = new Intent(DetailActivity.this, MainActivity.class);
-                  startActivity(a);
-                  finish();
+                  Intent i2=new Intent(DetailActivity.this, MainActivity.class);
+                  i2.putExtra("id",id);
+                  startActivity(i2);
               }else {
                   Toast.makeText(DetailActivity.this, "Verifique los datos ingresados", Toast.LENGTH_SHORT).show();
               }

@@ -85,15 +85,13 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String mensaje= " Pedido: \n";
                 for (int a = 0; a < list.size(); a++) {
-                    enviarPedido("99057019", mensaje = mensaje + list.get(a).getSoldItemName() + " " + list.get(a).getPrice() + " \n")
+                    enviarPedido("95804586", mensaje+ list.get(a).getQuantity()+ " " + list.get(a).getSoldItemName() + " " + list.get(a).getPrice() + " \n")
                     ;
                 }
                 }
         });
 
     }
-
-
 
     private void enviarPedido(String numero, String mensaje){
         try {
@@ -106,10 +104,6 @@ public class PaymentActivity extends AppCompatActivity {
         }
 
     }
-
-
-
-
 
     public void btnBack (View view){
         Intent i3=new Intent(PaymentActivity.this, OrderActivity.class);
